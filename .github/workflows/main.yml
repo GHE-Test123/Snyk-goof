@@ -16,7 +16,7 @@ jobs:
         run: snyk test --json --print-deps | snyk-delta -d
         env:
            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      - #name: Upload SARIF file
+      #name: Upload SARIF file
         #uses: github/codeql-action/upload-sarif@v2
         #with:
          # sarif_file: snyk-sarif1.json
