@@ -13,7 +13,7 @@ jobs:
         env:
            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Snyk Delta
-        run: snyk monitor
+        run: ssnyk test --json --print-deps | snyk-delta -d
         env:
            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Upload SARIF file
